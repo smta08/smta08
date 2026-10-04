@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 512" width="960" height="512" role="img" aria-labelledby="t"><title id="t">LifeOS architecture: features call domain, repositories and services. Repositories are the only database access; user paths go through the Supabase client under the user&#x27;s JWT so row-level security enforces tenancy; Prisma is limited to migrations and webhooks. Phase 2 AI pipeline: SQL date pre-pass, model pre-filter, cross-reference model, Zod parse, code validators, upsert. Validators in code are the security control, not prompts.</title>
+<style>
+  svg{--ink:#1f2328;--muted:#59636e;--line:#d1d9e0;--accent:#0f766e;--soft:#e3f2ef;--surface:#f6f8fa}
+  @media (prefers-color-scheme:dark){svg{--ink:#e6edf3;--muted:#9198a1;--line:#3d444d;--accent:#2dd4bf;--soft:#0f2a27;--surface:#151b23}}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif} .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace}
+  .ink{fill:var(--ink)} .muted{fill:var(--muted)} .accent{fill:var(--accent)}
+  .box{fill:var(--surface);stroke:var(--line);stroke-width:1}
+  .hot{fill:var(--soft);stroke:var(--accent);stroke-width:1.5}
+  .dash{fill:none;stroke:var(--line);stroke-width:1.2;stroke-dasharray:5 4}
+  .wire{stroke:var(--muted);stroke-width:1.2;fill:none}
+  .arrowhead{fill:var(--muted)}
+  .blink{animation:b 1.1s steps(1) infinite} @keyframes b{50%{opacity:0}}
+  .pulse{animation:p 2.4s ease-in-out infinite} @keyframes p{50%{opacity:.35}}
+  @media (prefers-reduced-motion:reduce){.blink,.pulse{animation:none}}
+</style>
+<text x="30" y="34" class="mono muted" font-size="13">LIFEOS / MODULE BOUNDARIES</text>
+<text x="930" y="34" text-anchor="end" class="mono accent" font-size="13">phase 1 · live</text>
+<rect x="30" y="52" width="900" height="62" rx="8" class="box"/><text x="46" y="78" class="mono ink" font-size="15" font-weight="600">features/</text><text x="46" y="100" class="sans muted" font-size="13">UI + Server Actions per product area · every action calls requireUser() first</text>
+<line x1="170" y1="114" x2="170" y2="144" class="wire"/><polygon points="165,143 175,143 170,150" class="arrowhead"/>
+<rect x="30" y="150" width="280" height="62" rx="8" class="box"/><text x="46" y="176" class="mono ink" font-size="15" font-weight="600">domain/</text><text x="46" y="198" class="sans muted" font-size="13">pure rules · date math, urgency</text>
+<line x1="480" y1="114" x2="480" y2="144" class="wire"/><polygon points="475,143 485,143 480,150" class="arrowhead"/>
+<rect x="340" y="150" width="280" height="62" rx="8" class="hot"/><text x="356" y="176" class="mono ink" font-size="15" font-weight="600">repositories/</text><text x="356" y="198" class="sans muted" font-size="13">the only code that touches the DB</text>
+<line x1="790" y1="114" x2="790" y2="144" class="wire"/><polygon points="785,143 795,143 790,150" class="arrowhead"/>
+<rect x="650" y="150" width="280" height="62" rx="8" class="box"/><text x="666" y="176" class="mono ink" font-size="15" font-weight="600">services/</text><text x="666" y="198" class="sans muted" font-size="13">adapters: AI, email, auth</text>
+<line x1="480" y1="212" x2="480" y2="242" class="wire"/><polygon points="475,241 485,241 480,248" class="arrowhead"/>
+<rect x="200" y="248" width="340" height="62" rx="8" class="hot"/><text x="216" y="274" class="mono ink" font-size="15" font-weight="600">Supabase client · user JWT</text><text x="216" y="296" class="sans muted" font-size="13">every user read/write · RLS enforces tenancy</text>
+<rect x="590" y="248" width="340" height="62" rx="8" class="box"/><text x="606" y="274" class="mono ink" font-size="15" font-weight="600">Prisma · service role</text><text x="606" y="296" class="sans muted" font-size="13">migrations + webhooks only (bypasses RLS)</text>
+<path d="M480 236 H760 V248" class="wire"/><polygon points="755,241 765,241 760,248" class="arrowhead"/>
+<text x="30" y="274" class="sans muted" font-size="13">tenancy is enforced</text>
+<text x="30" y="292" class="sans muted" font-size="13">by the database,</text>
+<text x="30" y="310" class="sans muted" font-size="13">not by memory →</text>
+<line x1="30" y1="346" x2="930" y2="346" stroke="var(--line)" stroke-dasharray="2 4"/>
+<text x="30" y="378" class="mono muted" font-size="13">AI LIFE-SCAN PIPELINE</text>
+<text x="930" y="378" text-anchor="end" class="mono muted" font-size="13">phase 2 · designed, in progress</text>
+<rect x="30.0" y="396" width="128" height="58" rx="8" class="dash"/>
+<text x="94.0" y="421" text-anchor="middle" class="sans ink" font-size="14" font-weight="600">SQL date</text>
+<text x="94.0" y="440" text-anchor="middle" class="sans muted" font-size="13">pre-pass</text>
+<line x1="161.0" y1="425" x2="175.4" y2="425" class="wire"/><polygon points="174.4,420 174.4,430 181.4,425" class="arrowhead"/>
+<rect x="184.4" y="396" width="128" height="58" rx="8" class="dash"/>
+<text x="248.4" y="421" text-anchor="middle" class="sans ink" font-size="14" font-weight="600">model</text>
+<text x="248.4" y="440" text-anchor="middle" class="sans muted" font-size="13">pre-filter</text>
+<line x1="315.4" y1="425" x2="329.79999999999995" y2="425" class="wire"/><polygon points="328.79999999999995,420 328.79999999999995,430 335.79999999999995,425" class="arrowhead"/>
+<rect x="338.8" y="396" width="128" height="58" rx="8" class="dash"/>
+<text x="402.8" y="421" text-anchor="middle" class="sans ink" font-size="14" font-weight="600">cross-ref</text>
+<text x="402.8" y="440" text-anchor="middle" class="sans muted" font-size="13">model</text>
+<line x1="469.8" y1="425" x2="484.2" y2="425" class="wire"/><polygon points="483.2,420 483.2,430 490.2,425" class="arrowhead"/>
+<rect x="493.20000000000005" y="396" width="128" height="58" rx="8" class="dash"/>
+<text x="557.2" y="421" text-anchor="middle" class="sans ink" font-size="14" font-weight="600">Zod</text>
+<text x="557.2" y="440" text-anchor="middle" class="sans muted" font-size="13">parse</text>
+<line x1="624.2" y1="425" x2="638.6" y2="425" class="wire"/><polygon points="637.6,420 637.6,430 644.6,425" class="arrowhead"/>
+<rect x="647.6" y="396" width="128" height="58" rx="8" class="hot"/>
+<text x="711.6" y="421" text-anchor="middle" class="sans ink" font-size="14" font-weight="600">code</text>
+<text x="711.6" y="440" text-anchor="middle" class="sans muted" font-size="13">validators</text>
+<line x1="778.6" y1="425" x2="793.0" y2="425" class="wire"/><polygon points="792.0,420 792.0,430 799.0,425" class="arrowhead"/>
+<rect x="802.0" y="396" width="128" height="58" rx="8" class="dash"/>
+<text x="866.0" y="421" text-anchor="middle" class="sans ink" font-size="14" font-weight="600">upsert</text>
+<text x="866.0" y="440" text-anchor="middle" class="sans muted" font-size="13">facts</text>
+<text x="711.6" y="478" text-anchor="middle" class="sans accent" font-size="13" font-weight="600">↑ the security control.</text>
+<text x="711.6" y="496" text-anchor="middle" class="sans accent" font-size="13">prompts are not.</text>
+<text x="30" y="486" class="sans muted" font-size="13">raw email never crosses a step boundary: fetch → extract → discard in one step</text>
+</svg>
