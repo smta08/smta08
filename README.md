@@ -1,35 +1,63 @@
-### Hi, I'm Taha 👋
+<h1 align="center">Hi there, I'm Taha Saiyed 👋</h1>
+<h3 align="center">Full-Stack Developer | Privacy-First & Utility-Driven Engineering</h3>
 
-I'm a full-stack developer in Vancouver. I'm doing a post-bacc in Computer & Information Systems at [Douglas College](https://www.douglascollege.ca/) and working part-time at Save-On-Foods while I study.
+<p align="center">
+  <a href="https://www.linkedin.com/in/TahaSaiyed" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</p>
 
-Most of what I build is for the boring stuff people forget about: job applications, subscription renewals, documents that quietly expire. I like apps that do one useful thing and don't ask for more of your data than they need.
+I am a Full-Stack Software Engineer based in Vancouver, BC, currently completing my Post-Baccalaureate Diploma in Computer & Information Systems (Emerging Technology) at [Douglas College](https://www.douglascollege.ca/). 
 
-Right now I'm working on [LifeOS](https://github.com/smta08/lifeos) and looking for a **co-op or internship** in software, QA, data or IT support.
+My development philosophy centers on building **utility-driven, privacy-first applications**. I specialize in automating the mundane—transforming tedious tasks like job tracking, subscription management, and document renewals into seamless, secure experiences that never ask for more user data than absolutely necessary.
 
-### Things I've built
+🚀 **I am currently actively seeking Co-op or Internship opportunities in Software Engineering, QA, Data Analytics, or IT Support.**
 
-- **[LifeOS](https://github.com/smta08/lifeos)**: keeps track of renewals, bills and expiring documents, and warns you before they turn into a problem. It can scan your Gmail with read-only access, keeps only what it needs (like a renewal date) and throws the email away. Next.js, TypeScript, Supabase.
-- **[ApplyFlow](https://github.com/smta08/ApplyFlow)**: Android app for keeping track of job applications, interviews and when to follow up. Works fully offline, sends reminders, exports to CSV. Java, Room.
-- **[NutriGuard](https://github.com/smta08/NutriGuard)**: Android app for logging meals, water, sleep and mood. Nutrition data comes from Open Food Facts, with a halal filter. Still a prototype.
-- **[BILLINGSOFTWARE](https://github.com/smta08/BILLINGSOFTWARE)**: billing and invoicing app in Angular, built with a small team back in 2023. I built the header, navigation and invoice pages.
+---
 
-A couple of other projects (a job-application automation tool and a halal investing platform) are still private. They'll show up here once they're cleaned up.
+### 💻 Featured Projects
 
-### What I work with
+> **[LifeOS](https://github.com/smta08/lifeos)** | *Next.js, TypeScript, Supabase*
+> An automated lifecycle management platform for subscriptions, bills, and expiring documents. Features a secure, read-only Gmail integration that extracts necessary renewal dates and immediately discards the email body, ensuring zero unnecessary data retention.
 
-<picture>
+> **[ApplyFlow](https://github.com/smta08/ApplyFlow)** | *Java, Room Database (Android)*
+> An offline-first Android application designed for comprehensive job pipeline tracking. Engineered to manage applications, track interview stages, deploy follow-up reminders, and execute robust CSV data exports entirely on-device.
+
+> **[NutriGuard](https://github.com/smta08/NutriGuard)** | *Java, SQLite, Firebase (Android)*
+> A holistic health tracking prototype for logging meals, hydration, sleep, and mood. Integrates the Open Food Facts API with customized dietary filtering (Halal) and utilizes an offline-first architecture with background synchronization.
+
+> **[BILLINGSOFTWARE](https://github.com/smta08/BILLINGSOFTWARE)** | *Angular*
+> A collaborative billing and invoicing application. Architected the core user interface, including the global header, intuitive navigation, and dynamic invoice generation pages.
+
+*Note: Additional projects, including a job-application automation pipeline and a bespoke investing platform, are currently in stealth and will be open-sourced soon.*
+
+---
+
+### 🛠️ Technical Arsenal
+
+<p align="left">
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,supabase,tailwind,java,androidstudio,git,linux,figma&theme=dark" />
-    <img alt="TypeScript, JavaScript, React, Next.js, Node.js, Express, MongoDB, PostgreSQL, Supabase, Tailwind, Java, Android Studio, Git, Linux, Figma" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,supabase,tailwind,java,androidstudio,git,linux,figma&theme=light" />
-</picture>
+    <img alt="Tech Stack" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,supabase,tailwind,java,androidstudio,git,linux,figma&theme=light" />
+  </picture>
+</p>
 
-Currently learning Docker, GitHub Actions and AWS.
+**Currently Expanding Expertise In:** Docker, GitHub Actions, CI/CD Pipelines, and AWS Cloud Infrastructure.
 
-### A bit more
+---
 
-- 🏆 Our team of four placed 3rd at the Vision2Reality Hackathon (Sept 2026)
-- 💼 Before Douglas: a BCA from Swarrnim University, plus internships at Kipling Media (Vancouver) and Web Nodes (Ahmedabad)
-- ⛰️ When I'm not coding I'm usually on a trail somewhere in BC
+### 🏆 Experience & Achievements
 
-### Say hi
+- **Hackathon Success:** 🥉 Placed 3rd out of a highly competitive cohort at the **Vision2Reality (V2R) Hackathon** (Sept 2026) for pitching a comprehensive startup growth architecture.
+- **Industry Experience:** Web Development & IT Support Internships at **Kipling Media** (Vancouver) and **Web Nodes** (Ahmedabad), gaining hands-on experience in full-stack client deployment and hospital platform architecture.
+- **Community Leadership:** Active Student Volunteer for Douglas College campus events and orientation centers.
 
-The easiest way to reach me is [LinkedIn](https://www.linkedin.com/in/TahaSaiyed).
+---
+
+### ⛰️ Beyond the Screen
+
+When I’m not stepping through code or optimizing databases, I spend my time exploring British Columbia's outdoors. You can usually find me hiking the trails around Pump Peak and Evans Peak, or kayaking out on the water.
+
+<p align="center">
+  <b>Let's connect and build something impactful. <a href="https://www.linkedin.com/in/TahaSaiyed">Reach out on LinkedIn</a>.</b>
+</p>
